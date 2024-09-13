@@ -1,0 +1,9 @@
+table,td {border:1px solid black;}
+table{width:75%;margin-right: auto;margin-left:auto;
+      font-family: arial; text-align: center;color:navy;
+      background:url(music-1.gif)repeat center fixed;border-collapse: collapse}
+
+    tr#r1{background-color: yellow;}
+.c1{width:30%}
+.c2{width:50%}
+caption{font-size:3em; margin-bottom: 5%}
