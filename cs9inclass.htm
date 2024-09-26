@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS-9 Inclass</title>
+
+	<style>
+	/* Your styles go here */
+	h1{text-align: center;}
+	p{margin-left: 10px;font-family: Arial, Helvetica, sans-serif;}
+	form{background-color: silver;border-style: solid;border-width: 5px;border-color: aqua;width: 50%;padding-top: 20px;padding-bottom: 20px;margin-left: auto;margin-right: auto;}
+	</style>
+	
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1>My Class form</h1>
+	
+	<form method="post" action="">
+	
+		<p>
+		Please Enter Your Name:<input type="text" name="myname" size="20" placeholder="Enter Name Here"/>
+
+	</p>
+	<p>
+		Please select your class:<select name="my class">
+			<option value="Empty">Please Select a CLass</option>
+			<option value="FR">Freshman</option>
+			<option value="SP">Sophomore</option>
+			<option value="Jr">Junior</option>
+			<option value="Sr">Senior</option>
+
+
+		</select>
+	</p>
+
+	<p>
+		Please Select Your Grade: <input type="radio" name="Grade" value="A Grade"/>A Grade
+		                          <input type="radio" name="Grade" value="B Grade"/>B Grade
+								  <input type="radio" name="Grade" value="C Grade"/>C Grade
+
+
+	</p>
+	<p>
+		Please select the magazines that you read: <br>
+		<input type="checkbox" name="select the magazines" value="Wall Street Journal"/>Wall Street Journal<br>
+		<input type="checkbox" name="select the magazines" value="Boston Globe"/>Boston Globe<br>
+		<input type="checkbox" name="select the magazines" value="New York Times"/>New York Times<br>
+
+	</p>
+	<p>
+		Please Enter Any Suggestion for the Course:
+		<textarea rows="10" cols="40" name="come" placeholder="Type Something Here"></textarea>
+	</p>
+	<p>
+		<input type="submit" value="I am done">
+		<input type="reset" value="I am wrong">
+	</p>
+	</form>
+
+  </body>
+</html>
