@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="select.css" type="text/css"/>
+
+	<style>
+	/* Your styles go here */
+	  h1#heading{color:black;font-family: Arial, Helvetica, sans-serif;font-weight: bold;
+	             text-align: center;}
+	  img#banner{display: block; margin-right: auto; margin-left: auto; width:10%;
+		border-radius: 50%;margin-top: 1%;}
+	
+		h2{text-align: center;}
+
+		form{margin-left: auto;margin-right: auto;
+			background-color:rgb(255, 254, 250);border-style:dotted;
+			border-width: 5px;border-color:darkgoldenrod;
+			width: 80%;padding-top: 40px; padding-bottom: 40px;margin-top: 40px;
+		    padding-left: 20px;padding-right: 20px;}
+
+		div#cu{color: black;font-size: medium;}
+
+		/*Start of the menu styles*/
+		.topnav {
+            background-color: rgb(250, 242, 234);
+            overflow: hidden;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+		.topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 1em;
+		}
+
+		.active {
+            background-color: silver;
+            color: white;
+        }
+       
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+		.dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 40px;
+            font-family: inherit;
+            background-color: inherit;
+            margin: 0;
+        }
+
+		.dropdowncontent {
+            position: absolute;
+            display: none;
+            background-color: white;
+            z-index: 1;
+		}
+
+		
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+		.dropdowncontent a {
+            float: none;
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+		}
+
+		.topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: gray;
+            color: black;
+        }
+
+		.dropdowncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+		.topnav .icon {
+            display: none;
+        }
+	
+		
+		div#opening{background:url(DevocionLizClayman.webp)no-repeat center fixed;font-size:x-large;
+			        padding-top: 100px;;padding-left: 400px;
+					padding-right: 500px;padding-bottom: 100px;
+					text-align: left; color:white;
+					font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+		img#logo{margin-right: auto; margin-left: auto; width:50%}
+
+		@media screen and (max-width: 750px) {
+			.topnav a:not(:first-child),
+			.dropdown .dropdownbutton {
+				display: none;
+			}
+			.topnav a.icon {
+				float: right;
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 750px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+					@media screen and (max-width:750px)
+                {
+					
+					
+                  
+
+
+		
+
+	</style>
+	<script type="text/javascript">
+       function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+
+
+	</script>
+	
+	
+	
+	</style>
+	
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<img id="banner" src="kohi_app.png" alt="kohi" title="kohi logo"/>
+	<h1 id="heading">Welcome to Kohi – Your Gateway to Specialty Coffee</h1>
+
+	<!--Here starts the menu-->
+	<div class="topnav" id="mytopnav">
+		<a href="index.htm">Home</a>
+		<a href="aboutus.htm">About Us</a>
+		<div class="dropdown">
+			<button class="dropdownbutton">Exlpore</button>
+			<div class="dropdowncontent">
+			   <a href="select.htm">Kohi Select</a>
+			   <a href="map.htm">Kohi Locations</a>
+			   <a href="benefit.htm">Kohi Benefits</a>
+		    </div>
+		</div>
+		<a href="contactus.htm" class="active">Contact Us</a>
+		
+	    <a href="credits,htm">Credits</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+	
+
+
+	
+	<div id="opening">
+	<img id="logo" src="kohiwhite.png" alt="logo" title="logo"/>
+	
+	<p>
+		We’d love to hear from you! <br>
+		Whether you have a question, <br>
+		need support, or just want to <br>
+		share your love for coffee, <br>
+		the Kohi team is here to help. <br>
+		Feel free to reach out to us through any of the methods below,<br>
+		
+
+
+
+    
+	</p>
+
+	
+
+	<div id="cu">
+	<form method="post" action="">
+	
+	<h2>Contect Us</h2>
+
+	<p>
+	Your Name:&nbsp;<input type="text" name="myname" size="20" placeholder="Enter Name Here"/>
+
+</p>
+
+<p>
+	Your Phone Number:&nbsp;<input type="text" name="phone" size="20" placeholder="Enter Phone Number Here"/>
+
+</p>
+
+<p>
+	Please select your favorite location:&nbsp;<select name="location">
+		<option value="Empty">Please Select a Location</option>
+		<option value="WH">Watchhouse</option>
+		<option value="LE">Levocion</option>
+		<option value="LB">La Cabra</option>
+
+
+	</select>
+</p>
+
+<p>
+	How do you like to enjoy your coffee? :<br>
+	                         <input type="radio" name="context" value="Coffee Chat"/>Coffee Chat
+							  <input type="radio" name="context" value="Grab and Go"/>Grab and Go
+							  <input type="radio" name="context" value="Work and Study"/>Work and Study
+							  <input type="radio" name="context" value="Social Hangouts"/>Social Hangouts
+							  <input type="radio" name="context" value="Solo Time"/>Solo Time
+
+
+
+
+
+</p>
+<p>
+	What's Your Go-To Coffee? <br>
+	<input type="checkbox" name="select coffee" value="Espresso"/>Espresso<br>
+	<input type="checkbox" name="select coffee" value="Latte"/>Latte<br>
+	<input type="checkbox" name="select coffee" value="Mocha"/>Mocha<br>
+	<input type="checkbox" name="select coffee" value="Cappuccino"/>Cappuccino<br>
+	<input type="checkbox" name="select coffee" value="Flat White"/>Flat White<br>
+	<input type="checkbox" name="select coffee" value="Macchiato"/>Macchiato<br>
+	<input type="checkbox" name="select coffee" value="Americano"/>Americano<br>
+
+
+</p>
+<p>
+	Please Enter Any Suggestion or Comments:
+	<textarea rows="10" cols="40" name="come" placeholder="Type Something Here"></textarea>
+</p>
+<p>
+	<input type="submit" value="I am done">
+	<input type="reset" value="I am wrong">
+</p>
+</form>
+	</div>
+</div>
+
+	
+  </body>
+</html>
+

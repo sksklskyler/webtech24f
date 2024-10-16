@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>About Us</title>
+
+	<style>
+	/* Your styles go here */
+	  h1#heading{color:black;font-family: Arial, Helvetica, sans-serif;font-weight: bold;
+	             text-align: center;}
+	  img#banner{display: block; margin-right: auto; margin-left: auto; width:10%;
+		border-radius: 50%;margin-top: 1%;}
+
+		/*Start of the menu styles*/
+		.topnav {
+            background-color: rgb(250, 242, 234);
+            overflow: hidden;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+		.topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 1em;
+		}
+
+		.active {
+            background-color: silver;
+            color: white;
+        }
+       
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+		.dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 40px;
+            font-family: inherit;
+            background-color: inherit;
+            margin: 0;
+        }
+
+		.dropdowncontent {
+            position: absolute;
+            display: none;
+            background-color: white;
+            z-index: 1;
+		}
+
+		
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+		.dropdowncontent a {
+            float: none;
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+		}
+
+		.topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: gray;
+            color: black;
+        }
+
+		.dropdowncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+		.topnav .icon {
+            display: none;
+        }
+	
+		.row{display:flex; flex-direction:row; }
+		.about {width:40%; margin-left: auto;margin-right: auto; text-align:center;font-family: Georgia, 'Times New Roman', Times, serif;font-size: large;}
+		div#opening{background:url(bk1.jpg)no-repeat center fixed;font-size:x-large;
+			padding-top: 100px;;padding-left: 400px;
+			padding-right: 500px;padding-bottom: 100px;
+					text-align: left; color:white;
+					font-weight: bold;font-family:Georgia, 'Times New Roman', Times, serif;}
+		img#logo{margin-right: auto; margin-left: auto; width:50%}
+
+		@media screen and (max-width: 750px) {
+			.topnav a:not(:first-child),
+			.dropdown .dropdownbutton {
+				display: none;
+			}
+			.topnav a.icon {
+				float: right;
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 750px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+					@media screen and (max-width:750px)
+                {
+					
+					.row{flex-direction:column;}
+                    .about{width:80%; margin-right:auto; margin-left:auto;}
+
+
+
+	</style>
+	<script type="text/javascript">
+       function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+
+
+	</script>
+	
+	
+	
+	</style>
+	
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<img id="banner" src="kohi_app.png" alt="kohi" title="kohi logo"/>
+	<h1 id="heading">Welcome to Kohi – Your Gateway to Specialty Coffee</h1>
+
+	<!--Here starts the menu-->
+	<div class="topnav" id="mytopnav">
+		<a href="index.htm" >Home</a>
+		<a href="aboutus.htm" class="active">About Us</a>
+		<div class="dropdown">
+			<button class="dropdownbutton">Exlpore</button>
+			<div class="dropdowncontent">
+			    <a href="select.htm">Kohi Select</a>
+			   <a href="map.htm">Kohi Locations</a>
+			   <a href="benefit.htm">Kohi Benefits</a>
+		    </div>
+		</div>
+		<a href="contactus.htm">Contact Us</a>
+		
+	    <a href="credits,htm">Credits</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+
+	
+	<div id="opening">
+		<img id="logo" src="kohiwhite.png" alt="logo" title="logo"/>
+	<p>About Us<br>
+		<br>
+		Join us on this journey—sip, share, and explore with Kohi! <br>
+		
+		
+		</p>
+	</div>
+
+	<div class="about">
+		<br>
+	<p> At Kohi, we are passionate about bringing coffee enthusiasts and independent specialty cafes together through a seamless and rewarding experience. Our mobile app connects you to a world of artisanal coffee by providing detailed profiles, locations, and reviews of the best specialty cafes. Whether you're a local coffee lover or exploring new cities, Kohi makes discovering unique cafes easier and more enjoyable. </p>
+    <br>
+	<p> With our integrated customer loyalty program, Kohi Select, you can earn and redeem rewards at participating cafes across different locations. We believe in building a vibrant coffee community, which is why Kohi includes interactive features like user-generated content, community discussions, and personalized recommendations. </p>
+   <br>
+	<p> Our mission is simple: to create meaningful connections between coffee lovers and independent cafes while supporting the growth of local coffee culture. Kohi celebrates the craftsmanship of specialty cafes and offers a tailored experience for those who appreciate high-quality coffee. </p>
+	<br>
+	<p>We are starting in the Greater Boston and New York City areas, with plans to expand globally. Kohi is set to become your go-to platform for discovering and enjoying the world of specialty coffee. </p>
+	<br>
+
+	
+	<br>
+
+	
+</div>
+	
+	
+
+	
+	
+  </body>
+</html>
+

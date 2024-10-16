@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Kohi Select</title>
+	<link rel="stylesheet" href="select.css" type="text/css"/>
+
+	<style>
+	/* Your styles go here */
+	  h1#heading{color:black;font-family: Arial, Helvetica, sans-serif;font-weight: bold;
+	             text-align: center;}
+	  img#banner{display: block; margin-right: auto; margin-left: auto; width:10%;
+		border-radius: 50%;margin-top: 1%;}
+	
+		h2{margin-left: 5%;}
+
+		/*Start of the menu styles*/
+		.topnav {
+            background-color: rgb(250, 242, 234);
+            overflow: hidden;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+		.topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 1em;
+		}
+
+		.active {
+            background-color: silver;
+            color: white;
+        }
+       
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+		.dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 40px;
+            font-family: inherit;
+            background-color: inherit;
+            margin: 0;
+        }
+
+		.dropdowncontent {
+            position: absolute;
+            display: none;
+            background-color: white;
+            z-index: 1;
+		}
+
+		
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+		.dropdowncontent a {
+            float: none;
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+		}
+
+		.topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: gray;
+            color: black;
+        }
+
+		.dropdowncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+		.topnav .icon {
+            display: none;
+        }
+	
+		
+		.about {width:40%; margin:3%; text-align:left;font-family: Georgia, 'Times New Roman', Times, serif;}
+		div#opening{background:url(lc.webp)no-repeat center fixed;font-size:x-large;
+			        padding-top: 100px;;padding-left: 400px;
+					padding-right: 500px;padding-bottom: 100px;
+					text-align: left; color:white;
+					font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+		img#logo{margin-right: auto; margin-left: auto; width:50%}
+
+		@media screen and (max-width: 750px) {
+			.topnav a:not(:first-child),
+			.dropdown .dropdownbutton {
+				display: none;
+			}
+			.topnav a.icon {
+				float: right;
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 750px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+					@media screen and (max-width:750px)
+                {
+					
+					
+                    .about{width:80%; margin-right:auto; margin-left:auto;}
+
+
+		
+
+	</style>
+	<script type="text/javascript">
+       function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+
+
+	</script>
+	
+	
+	
+	</style>
+	
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<img id="banner" src="kohi_app.png" alt="kohi" title="kohi logo"/>
+	<h1 id="heading">Welcome to Kohi – Your Gateway to Specialty Coffee</h1>
+
+	<!--Here starts the menu-->
+	<div class="topnav" id="mytopnav">
+		<a href="index.htm">Home</a>
+		<a href="aboutus.htm">About Us</a>
+		<div class="dropdown">
+			<button class="dropdownbutton">Exlpore</button>
+			<div class="dropdowncontent">
+			   <a href="select.htm" class="active">Kohi Select</a>
+			   <a href="map.htm">Kohi Locations</a>
+			   <a href="benefit.htm">Kohi Benefits</a>
+		    </div>
+		</div>
+		<a href="contactus.htm">Contact Us</a>
+		
+	    <a href="Credits,htm">credits</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+	
+
+
+	
+	<div id="opening">
+	<img id="logo" src="kohiwhite.png" alt="logo" title="logo"/>
+	
+	<p>
+		Welcome to Kohi Select,<br>
+		your curated guide to the best specialty cafes around. <br>
+		We've handpicked each location based on exceptional <br>
+		quality, ambiance, and a dedication to the craft of coffee-making. <br>
+		Whether you're looking for a cozy spot to enjoy a quiet cup, <br>
+		or a trendy cafe to catch up with friends, these cafes offer a truly unique coffee experience.<br>
+
+
+    
+	</p>
+   
+	</div>
+	<div class="about">
+	<h2>Why Choose Kohi Select Cafes?</h2>
+	<ul> 
+		<li>Artisanal Quality: Every cafe featured in Kohi Select prides itself on serving high-quality, specialty coffee, brewed with passion and precision.</li>
+		<li>Curated Atmosphere: From minimalist interiors to charming local decor, each cafe provides a distinct atmosphere that enhances your coffee experience.</li>
+	    <li>Signature Drinks & More: Discover signature drinks, exclusive blends, and specialty desserts crafted to pair perfectly with your coffee.</li>
+        <li>Loyalty Benefits: As part of our Kohi Select program, every visit earns you points that can be redeemed across all participating cafes, so you can enjoy rewards no matter where you go.</li>
+
+	</ul>
+</div>
+
+<h2>Explore Our Top Picks</h2>
+<table>
+	<tr>
+        <td></td>
+		<td>Name</td>
+		<td>Signature</td>
+		<td>Features</td>
+		<td>Address</td>
+	</tr>
+
+	<tr>
+        <td><img id="list" src="watchhouse.jpg" alt="watchhouse" tittle="watchhouse"></td>
+		<td>Watchhouse 5th Ave</td>
+		<td>
+			<ul>
+				<li>Latte 1829 Espresso</li>
+				<li>Watchhouse cold brew</li>
+				<li>Long Black</li>
+				<li>Blood Orange Danish</li>
+			</ul>
+			</td>
+		<td>WatchHouse is a specialty coffee chain from London opening its second U.S. location in the Chrysler Building, New York. It offers high-quality coffee, breakfast, lunch, and baked goods, and features a cocktail menu for evenings. The space combines a modern coffee experience with a historic setting.</td>
+		<td>660 5th Ave, New York, NY 10103</td>
+	</tr>
+
+	<tr>
+        <td><img id="list" src="LaCabra.jpg" alt="cabra" tittle="carbra"></td>
+		<td>La Cabra</td>
+		<td>
+			<ul>
+				<li>Espresso</li>
+				<li>Flight Set</li>
+				<li>Draft Latte</li>
+				<li>Soba Cha</li>
+			</ul>
+			<td>The second output of the Danish coffee company in the United States, the SoHo location of La Cabra features a rotational coffee program and an in-house bakery in a modern architectural setting.</td>
+            <td>284 Lafayette St, New York, NY 10012</td>
+	</tr>
+
+	<tr>
+        <td><img id="list" src="DevocionLizClayman.webp" alt="devocion" tittle="devicion"></td>
+		<td>Devoción Coffee</td>
+		<td>
+			<ul>
+				<li>Cortado</li>
+				<li>Special Drip</li>
+				<li>Americano</li>
+				<li>Mango,blackberry,peach lemongrass</li>
+			</ul>
+			<td>Devocíon offers an industrial and cozy atmosphere for grabbing your cup of coffee. Definitely an ideal place to start off the day or meet people in.</td>
+			<td>69 Grand St, Brooklyn, NY 11249-4110
+			</td>
+	</tr>
+
+	</table>
+
+		
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/2KzsPldsgd8?si=4tkD2cnU9fePLxIa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/m8zGS3pZyDI?si=7ZIb2s5UkuWjeH1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/t7UCfKoNCR4?si=xW8h8EjKfH1IGJMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	
+  </body>
+</html>
+
