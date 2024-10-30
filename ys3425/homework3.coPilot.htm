@@ -20,87 +20,78 @@
 	<script>
 	/* Your JavaScript goes here */
 	function showData() {
-            // Prevent the form from submitting
-            event.preventDefault();
+            // Get the values from the form
+            let product = document.forms["dafrm"]["product"].value.trim().toLowerCase();
+            let quantity = document.forms["dafrm"]["quantity"].value.trim();
+            let amountField = document.forms["dafrm"]["AmtDue"];
             
-            // Get the form elements
-            const form = document.getElementById('dafrm');
-            const productInput = form.elements['product'].value.trim().toLowerCase();
-            const quantityInput = form.elements['quantity'].value.trim();
-            const amountField = form.elements['AmtDue'];
-            
-            // Validate the product input
-            const validProducts = {
-                milk: 3.50,
-                apple: 0.99,
-                fish: 5.99
-            };
-
-            if (!productInput) {
-                alert('Please enter a product.');
-                return;
+            // Validate product
+			const validProducts = ["milk", "apple", "fish"];
+            if (!validProducts.includes(product)) {
+                alert("Please enter a valid product: Milk, Apple, or Fish.");
+                amountField.value = "";
+                return false;
+            }
+			
+            // Validate quantity
+            if (quantity === "" || isNaN(quantity)) {
+                alert("Please enter a valid numeric quantity.");
+                amountField.value = "";
+                return false;
             }
 
-            if (!(productInput in validProducts)) {
-                alert('Invalid product. Please enter Milk, Apple, or Fish.');
-                return;
-            }
-
-            // Validate the quantity input
-            const quantity = parseFloat(quantityInput);
-
-            if (quantityInput === '' || isNaN(quantity) || quantity < 0) {
-                alert('Please enter a valid numeric quantity (0 or more).');
-                return;
-            }
+            // Convert quantity to a number
+            quantity = parseFloat(quantity);
 
             // Calculate the amount owed
-            const productPrice = validProducts[productInput];
-            const amountDue = productPrice * quantity;
+            let cost = 0;
+            switch (product) {
+                case "milk":
+                    cost = 3.50;
+                    break;
+                case "apple":
+                    cost = 0.99;
+                    break;
+                case "fish":
+                    cost = 5.99;
+                    break;
+            }
+            let amountOwed = cost * quantity;
 
-            // Display the amount due with 2 decimal places
-            amountField.value = `$${amountDue.toFixed(2)}`;
+			// Display the amount owed with 2 decimal places
+            amountField.value = `$${amountOwed.toFixed(2)}`;
+            return false; // Prevent form submission
         }
+
 	</script>
   </head>
 
   <body>
-	<!-- Your HTML goes here -->
-<h3> Homework 3</h3>
-<p id="desc">
-    The form given below has 3 fields. Let us assume that the user will type in
-    the name of one of 3 products: Milk, Apple, or Fish. The user may enter these 
-    using any mix of cases, so be aware. You need to check to ensure that the user
-    enters a value. If it is not one of these 3, let the user know. 
-    Then the user will enter a quantity. You need to check to ensure that a quantity is entered 
-	(you may assume that 0 is a valid quality) and that the value is numeric. 
-    Once validated, use the following costs - 1 bottle of milk is $3.50; one 
-    apple is $0.99 and one pound of fish is $5.99 - and show the amount owed
-    in the third field. All of this should be done when the appropriate 
-    button is pressed. The amount must be shown with 2 decimal places and prefixed with
-	a $ (dollar) sign.     
-</p>
-<form id="dafrm" action="" method="POST">
-	<p>
-		<input type="text" name="product" size="20" placeholder="Enter product..."/>
-		&nbsp; &nbsp;&nbsp;
-		<input type="text" name="quantity" size="20" placeholder="Enter quantity.."/>
-	</p>
-	<p>
-		<input type="text" name="AmtDue" size="20" placeholder="show amount due" readonly/>
-	</p>
-	<p>
-		<input onclick="showData()" class="but" type="submit" name="submit" value="What Do I Owe"/>
-		&nbsp; &nbsp;&nbsp;
-		<input class="but" type="reset" name="reset" value="Clear All"/>  
-	</p>
-</form>
+    <form id="dafrm" action="" method="POST" onsubmit="return showData()">
+        <p>
+            <input type="text" name="product" size="20" placeholder="Enter product..."/>
+            &nbsp; &nbsp;&nbsp;
+            <input type="text" name="quantity" size="20" placeholder="Enter quantity.."/>
+        </p>
+        <p>
+            <input type="text" name="AmtDue" size="20" placeholder="show amount due" readonly/>
+        </p>
+        <p>
+            <input class="but" type="submit" name="submit" value="What Do I Owe"/>
+            &nbsp; &nbsp;&nbsp;
+            <input class="but" type="reset" name="reset" value="Clear All"/>  
+        </p>
+    </form>
 
 <h2>coPilot Reflection </h2>
-<p>The prompt I give to coPilot is: How would you solve this in JavaScript?+the hw description mentioned above </p>
-<p>The AI version of the code feels more structured and efficient compared to mine, and I noticed some differences in how it handles variables and logic. For example, it uses `const` for variable declarations, which keeps things more contained, whereas I used `var`, which could be less predictable in larger code. The AI version also returns right after every validation alert, which stops the function from running further if there’s an issue—something I missed in mine, where the code continues even if there's an invalid input, which could lead to bugs. 
+<p>The prompt I give to coPilot is: How would you solve this in JavaScript?+the hw description mentioned above. </p>
+<p>In my code, I structured the showData() function to retrieve form values, perform basic validation checks, and calculate the amount owed based on the product and quantity input. I separated out each step clearly: first retrieving values, then validating each one, and finally calculating and displaying the result. However, I didn't include `return` statements after each `alert`, meaning that the function continues to run even if there are invalid inputs. This could lead to unintended calculations or errors.
+</p>
+<p>
+	The coPilot version, by contrast, is a bit more optimized in terms of logic flow. It uses an object to store the product prices, which makes it easier to add or modify products if needed. Additionally, the AI code immediately stops execution using `return` statements right after each `alert`, which keeps the function cleaner by preventing further code execution when an error is detected. This approach reduces the chances of unexpected outcomes.
+</p>
 
-	The way it organizes product prices into an object is another noticeable difference; it seems tidier and makes it easier to adjust or add products later. In contrast, I wrote out each price separately, which works but doesn’t feel as efficient. The AI code also uses a more streamlined calculation process by pulling directly from the object, while mine repeats the logic for each product, which isn’t as concise. Additionally, the AI version’s use of template literals for formatting output feels cleaner, but that’s just a stylistic choice. In general, I can see how the structure and flow of the AI code aim to be more efficient, though both versions ultimately accomplish the same task.</p>
-	
-  </body>
+	<p>
+		While both versions achieve the same end result, the AI version feels more clear and concise, and it may be a bit easier to maintain if I want to expand or modify it in the future. My code, on the other hand, is straightforward and logically broken down into steps, which makes it clear to follow, even if it's not as streamlined. </p> 
+</body>
 </html>
