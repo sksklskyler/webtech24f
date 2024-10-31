@@ -21,10 +21,52 @@
      {
 
       var myfrm, myeuro;
-      myfrm = document.getElementById("convert")
-      myeuro = myfrm.euro.value;
-      myfrm.dollor.value = parseFloat(myeuro)/0.93;
+          event.preventDefault();
+          myfrm = document.getElementById("de");
+          myeuro = myfrm.euro.value;
+          mydollar = myfrm.dollar.value;
+
+
+            if ((myeuro=="") && (mydollar=="" ))
+          {
+            alert("Please enter a value")
+          }
+          else if ((myeuro!="" )&& (mydollar!=""))
+          {
+            alert ("Please enter only one vaild value")
+          }
+
+     else{
+
+          if((myeuro=="" )&& (mydollar!=""))
+          {
+            if (isNaN(mydollar==true))
+            {
+              alert ("Please enter the value for euro instesd of dollar")
+            }
+            else{
+              event.preventDefault();
+              myfrm.euro.value = (0.93 * mydollar).toFixed(2);        }
+          }
+            
+
+     else{
+      if (isNaN(myeuro==true))
+
+     {
+      alert("Please enter a numerical value")
      }
+
+     else{
+      event.preventDefault();
+      myfrm.dollar.value =  (myeuro/0.93).toFixed(2);
+     }
+    }
+
+
+
+     }
+    }
 
 
 	
@@ -37,7 +79,7 @@
   <body>
 	<!-- Your HTML goes here -->
 	<h1> Dollar/Euro or Euro/Dollar Converter</h1>
-	<form id="convert" action="" method="POST">
+	<form id="de" action="" method="POST">
         <p>
             Euro Value: <input type="text" name="euro" size="10" placeholder="Euro Here"/>
         </p>
@@ -45,7 +87,7 @@
             Dollar Value: <input type="text" name="dollar" size="10" placeholder="Dollars Here"/>
         </p>
         <p>
-            <input onclick="showData()" type="submit" name="submit" value="Convert"/> &nbsp; &nbsp;
+            <input onclick="doConvert()" type="submit" name="submit" value="Convert"/> &nbsp; &nbsp;
             <input type="reset" name="reset" value="Clear"/>
         </p>
 
