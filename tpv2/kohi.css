@@ -1,0 +1,154 @@
+
+img#banner{ display: block;margin-left: 3%; width:15%;margin-top: 5%; ;}
+
+ 
+ @font-face {
+		font-family: 'Helvetica Neue';
+		src: url('fonts/HelveticaNeue.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;}
+
+
+		body {
+            
+                background-image: url('pngtreebackground.png'); /* Replace with your image path */
+                background-size: cover; /* Ensures the image covers the entire viewport */
+                background-repeat: no-repeat; /* Prevents the image from repeating */
+                background-position: center; /* Centers the image */
+                background-attachment: fixed; /* Keeps the image fixed while scrolling */
+              }
+              
+		/*Start of the menu styles*/
+		.topnav {
+            margin-top: -8%;
+            overflow: hidden;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+;
+        }
+
+		.topnav a {
+            float: right;
+            color: black;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 2em;
+		}
+
+		.active {
+            color: white;
+        }
+       
+        .dropdown {
+            float: right;
+            overflow: hidden;
+			
+        }
+
+		.dropdown .dropdownbutton {
+            font-size: 2em;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 40px;
+            font-family: inherit;
+            background-color: inherit;
+            margin: 0;
+			
+        }
+
+		
+		.dropdowncontent {
+            position: absolute;
+            display: none;
+            background-color: white;
+            z-index: 1;
+            text-align: center;
+            padding: 14px 34.5px;
+
+			
+		}
+
+		
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+		.dropdowncontent a {
+            float: none;
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+		}
+
+		.topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: white;
+            color: black;
+        }
+
+		.dropdowncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+		.topnav .icon {
+            display: none;
+        }
+	
+		.row{display:flex; flex-direction:row; }
+		.about {width:40%; margin:3%; text-align:left;font-family: 'Helvetica Neue', Arial, sans-serif; padding-bottom: 5%; }
+
+		
+		img#logo{margin-right: auto; margin-left: auto; width:50%}
+
+		@media screen and (max-width: 750px) {
+			.topnav a:not(:first-child),
+			.dropdown .dropdownbutton {
+				display: none;
+			}
+			.topnav a.icon {
+				float: right;
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 750px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+					@media screen and (max-width:750px)
+                {
+					
+					.row{flex-direction:column;}
+                    .about{width:80%; margin-right:auto; margin-left:auto; }
+				}
