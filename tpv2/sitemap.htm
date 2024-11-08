@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Site-Map</title>
+	<link rel="stylesheet" href="kohi.css" type="text/css"/>
+
+	<style>
+	/* Your styles go here */
+	div#site{padding-top: 9%;font-family:'Helvetica Neue', Arial, sans-serif ;margin-left: 45%;width: 45%;margin-bottom: 10%;}
+
+	
+	</style>
+	
+	<script type="text/javascript">
+		function myFunction() {
+			 var x = document.getElementById("mytopnav");
+			 if (x.className === "topnav") {
+				 x.className += " responsive";
+			 } else {
+				 x.className = "topnav";
+			 }
+		 }
+ 
+ 
+ 
+	 </script>
+	
+	
+  </head>
+
+  <body>
+	<img id="banner" src="kohi_BLACK.png" alt="kohi" title="kohi logo"/>
+	<!-- Your HTML goes here -->
+	<div class="topnav" id="mytopnav">
+
+		<a href="sitemap.htm" class="active">site-map</a>
+	    <a href="credits.htm">credits</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		<a href="contactus.htm">contact us</a>
+		
+		<a href="aboutus.htm" >about us</a>
+
+		<div class="dropdown">
+			<button class="dropdownbutton">explore</button>
+			<div class="dropdowncontent">
+				<a href="map.htm" >map</a>
+			    <a href="select.htm">select</a>
+		    </div>
+		</div>
+
+		<a href="index.htm" >home</a>
+
+	</div>
+	
+
+	<div id="site">
+			<h4>Home</h4>
+				<ul>
+					<li><a href="index.htm" >kohi Home</a></li>
+				</ul>
+			</li>
+			
+			<h4>Explore</h4>
+				<ul>
+					<li><a href="map.htm" >kohi Map</a></li>
+					<li><a href="select.htm" >kohi Select</a></li>
+
+				</ul>
+			
+
+			<h4>About Us</h4>
+				<ul>
+					<li><a href="aboutus.htm" >kohi Mission</a></li>
+				</ul>
+			
+
+			<h4>Contact Us</h4>
+				<ul>
+					<li><a href="contactus.htm" >Contact kohi</a></li>
+				</ul>
+			
+
+			<h4>Credits</h4>
+				<ul>
+					<li><a href="credits.htm" >kohi Credits</a></li>
+				</ul>
+			
+
+			<h4>Site-map</h4>
+				<ul>
+					<li><a href="sitemap.htm" >kohi Site-map</a></li>
+				</ul>
+			
+			</div>
+	</div>
+	
+  </body>
+</html>
