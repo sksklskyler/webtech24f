@@ -20,12 +20,13 @@
 			myfrm = document.getElementById("dafrm");
 			mycolorone=myfrm.color1.value
 			mycolortwo=myfrm.color2.value
-			mypallette=myfrm.pallette.value
+			var mypallette = myfrm.pallette;
 
-			var greenredCol= brown;
-           var greenblueCol = cyan;
-		   var yellowredCol = orange;
-           var yellowblueCol = green;
+			var greenredCol = "brown";
+			var greenblueCol = "cyan";
+			var yellowredCol = "orange";
+			var yellowblueCol = "green";
+
 
 			if((mycolorone !="green") && (mycolorone != "yellow"))
 		{
@@ -37,30 +38,25 @@
 			alert("Please select one color from color two")
 		}
 
-		else if((mycolorone ="green")&& (mycolortwo="red"))
+		if (mycolorone == "green" && mycolortwo == "red") 
 		{
 
-			mypallette.style.backgroundColor="brown";
-		}
+        mypallette.style.backgroundColor = greenredCol;
 
-		else if((mycolorone ="green")&& (mycolortwo="blue"))
-		{
+    } 
+	else if (mycolorone == "green" && mycolortwo == "blue") 
+	{
+        mypallette.style.backgroundColor = greenblueCol;
 
-			mypallette.style.backgroundColor="cyan";
-		}
-
-		else if((mycolorone ="yellow")&& (mycolortwo="red"))
-		{
-
-			mypallette.style.backgroundColor="orange";
-		}
-
-		else ((mycolorone ="yellow")&& (mycolortwo="blue"))
-		{
-
-			mypallette.style.backgroundColor="green";
-		}
-
+    } 
+	else if (mycolorone == "yellow" && mycolortwo == "red") 
+	{
+        mypallette.style.backgroundColor = yellowredCol;
+    } 
+	else if (mycolorone == "yellow" && mycolortwo == "blue") 
+	{
+        mypallette.style.backgroundColor = yellowblueCol;
+    }
 
 	}
 	</script>
