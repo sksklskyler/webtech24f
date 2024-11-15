@@ -16,6 +16,7 @@
 	<script type="text/javascript">
 		function showData()
 		{
+			event.preventDefault()
 			var myfrm, mycolorone, mycolortwo, mypallette
 			myfrm = document.getElementById("dafrm");
 			mycolorone=myfrm.color1.value
@@ -83,7 +84,7 @@
 				</select> 
 			</p>
 			<p>
-				<textarea name="pallette"></textarea>
+				<textarea id="co" name="pallette"></textarea>
 			</p>
             <p>
                 <input type="submit" onclick="showData()" name="submit" value="SHOW"/> &nbsp; &nbsp;

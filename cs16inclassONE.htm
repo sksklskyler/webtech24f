@@ -13,6 +13,8 @@
         <script type="text/javascript">
             function showData()
             {
+                event.preventDefault();
+
                 var myfrm, myname, myage, mysex, mylevel, mycolor;
                 myfrm = document.getElementById("dafrm");
                 myname = myfrm.name.value;
@@ -37,7 +39,7 @@
                  }
                  else if  ( (mylevel !="freshperson") && (mylevel !="sophomore") && (mylevel !="junior") && (mylevel !="senior") )
                  {
-                    alert("Please enter one od the 4 vaild values for college level");
+                    alert("Please enter one of the 4 vaild values for college level");
                  }
 
                  else if(mycolor == "null")
