@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<title> Quiz 3 - MU - Spring 24</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<style type="text/css">
+	p#HC {font-family:arial black; text-decoration:underline; color:maroon}
+	h2 {text-align:center; font-family:Cursive;}
+	p.eagle {float:left; background-color:Aqua; margin-left:100px;width:150px; height:100px; text-align:center;padding-top:50px; font-family:Lucida Bright;
+	          font-size:1em;}
+    .a {font-style:italic; font-weight:bold;}
+	
+	</style>
+	
+	<script type="text/javascript">
+		 function chgImg(eagle)
+            {
+                const myimg = document.getElementById("daimg");
+				const title = document.querySelector("h2");
+                const blocks = document.querySelectorAll(".eagle");
+				blocks.forEach(block => block.style.backgroundColor = "silver");
+
+				
+                if(eagle =="a")
+                {
+                    myimg.src = "baldeagle1.jpg";
+                    myimg.alt = "Imageone";
+                    myimg.title = "Eagleone";
+					myimg.style.border = "5px ridge red";
+                    title.textContent = "See Eagle One";
+                    document.getElementById("a").style.backgroundColor = "yellow";
+				}
+
+				else if(eagle =="b")
+                {
+                    myimg.src = "baldeagle2.jpg";
+                    myimg.alt = "Imagetwo";
+                    myimg.title = "Eagletwo";
+					myimg.style.border = "5px dashed green";
+                    title.textContent = "See Eagle Two";
+                    document.getElementById("b").style.backgroundColor = "yellow";
+					
+				}
+
+				else if(eagle =="c")
+                {
+                    myimg.src = "baldeagle3.jpg";
+                    myimg.alt = "Imagethree";
+                    myimg.title = "Eaglethree";
+					myimg.style.border = "5px dotted blue";
+                    title.textContent = "See Eagle Three";
+                    document.getElementById("c").style.backgroundColor = "yellow";
+				}
+
+				else if(eagle =="d")
+                {
+                    myimg.src = "";
+                    myimg.alt = "";
+                    myimg.title = "";
+					myimg.style.border = "none";
+                    title.textContent = "Change This Image Title";
+					blocks.forEach(block => block.style.backgroundColor = "Aqua");
+
+				}
+			}
+	
+	</script>
+	
+</head>
+
+<body>
+
+<h1 style="text-align:center; font-family:Arial; font-weight:bold;">Quiz 3 - Make-Up(25 points)</h1>
+<p style="font-family:arial;font-size:16pt;color:navy;padding:10px 100px 10px 100px;">
+	Add appropriate functionality to the four aqua blocks below such that 
+	when the user clicks on each of the 3 aqua-colored blocks, there is a different image of the bald eagle 
+	displayed in the empty image holder above the blocks. The image should have a <span class="a">ridge border, red color, and 5px thick 
+	for the first image </span>, <span class="a">dashed border, green color, 5px thick </span>for the second, and <span class="a">blue color, dotted border, 5px thick</span>
+	for the third.The block that is clicked must have a yellow background. All others must have a silver background. 
+	The title above (Change this Image Title) must say "See Eagle One", "See Eagle Two" or "See Eagle Three".
+	Ensure that the image is completely defined in each case. 
+	When the user clicks on the last block, the title must go back to "Change This Image Title". No image must be shown.
+	No borders must be seen. All blocks must have the aqua background. 
+	For full points (25) please write it as a single function. For five (5) points less,
+	use as many functions as you need. 
+    
+	
+</p>
+<hr style="height:10px" />
+<h2> Change This Image Title</h2>
+<p style="text-align:center">
+	<img id="daimg"  src="" alt="" title="This is the image" style="border:3px dotted black;" width="100" height="100"/>
+	
+
+
+
+
+</p>
+<p style="text-align:center">
+	<p id="a" onclick="chgImg(this.id)" class="eagle">See Eagle One</p> 
+    <p id="b" onclick="chgImg(this.id)" class="eagle">See Eagle Two</p> 
+	<p id="c" onclick="chgImg(this.id)" class="eagle">See Eagle Three</p>
+	<p id="d" onclick="chgImg(this.id)" class="eagle">Clear It All</p>
+    
+	
+</p>
+
+
+</body>
+</html>
