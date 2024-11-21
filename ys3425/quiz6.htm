@@ -19,25 +19,27 @@
 	
 	<script type="text/javascript">	
    
-   var pos=200, ctr = 0;
+   var pos=200 , ctr = 0;
   
-   function scrollText()
+   function moveBox()
    {
-	document.getElementById("a").innerHTML = mytext[ctr];
-	document.getElementById("a").style.left = pos +"px";
-	document.getElementById("a").style.top = 200+ pos +"px";
+	var myblock
+	myblock=document.getElementById("a");
+	myblock.style.left = pos +"px";
+	myblock=style.top = + pos +"px";
+
     
-	pos -=1;
+	pos = pos-1;
 	if (pos < 100)
 		    {
-				pos=800
+				pos=200
 				++ ctr; 
-				if ( ctr >= mytext.length )
+				if ( ctr >= myblock.length )
 			    {
 				  ctr=0
 			    }
 			}
-			setTimeout("scrollText()",5);
+			setTimeout("moveBox()",50);
 		}
 
    
@@ -54,7 +56,7 @@
 	
   </head>
 
-  <body onload="scrollText()">
+  <body onload="moveBox()">
 	
 	<!-- Your HTML goes here -->
 	<h1> Animate the boxes (25 points) </h1>
