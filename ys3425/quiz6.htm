@@ -4,13 +4,13 @@
 
   <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
-	<title></title><!-- a point off if not changed.-->
+	<title>Quiz 6</title><!-- a point off if not changed.-->
 
 	<style>
 	/* Your styles go here */
 
 	h1 {font-family:Arial; font-size:large; text-align:center; color:Navy;}
-	div {height:75px; width:75px; background-color:red;}
+	div {height:75px; width:75px; background-color:red;position: absolute;}
 	p#inst {font-family:Arial; font-size:large; color:navy; font-weight:bold;}
 	
 	
@@ -19,30 +19,34 @@
 	
 	<script type="text/javascript">	
    
-   var pos=200 , ctr = 0;
+   var leftpos=200,toppos=400;
   
    function moveBox()
    {
-	var myblock
-	myblock=document.getElementById("a");
-	myblock.style.left = pos +"px";
-	myblock=style.top = + pos +"px";
+	 var myblock=document.getElementById("a");
+	myblock.style.left = leftpos +"px";
+	myblock.style.top = toppos +"px";
 
-    
-	pos = pos-1;
-	if (pos < 100)
-		    {
-				pos=200
-				++ ctr; 
-				if ( ctr >= myblock.length )
-			    {
-				  ctr=0
-			    }
-			}
+    toppos -= 2;
+	
+	if (toppos < 100)
+	 {
+	   toppos=400;
+	   leftpos+=100;
+
+
+	
+	if (leftpos>800)
+	{
+		leftpos=200;
+	}
+	
+	 }
+	
 			setTimeout("moveBox()",50);
-		}
-
+		
    
+}
 
 
 			
@@ -79,9 +83,9 @@
         You will get more points for trying and failing than for successfully implementing
         code that is not yours. --> 
 
-	<div>
+	<div id="a">
 
-		<p id="a">Animate Me!!</p>
+		Animate Me!!
 	</div>
 		
 	

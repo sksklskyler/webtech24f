@@ -42,38 +42,54 @@
         <script type="text/javascript">
 
       function showMe() {
+
             event.preventDefault();
 
-            var myfrm, myproduct,myquantity, mytotal
 
             myfrm = document.getElementById("f");
-            const myquantity=document.forms["f"]["quantity"].value;
-            var mytotal = document.forms["f"]["total"];
-            const pricelist = {shirt:20, pants:15};
-            const mysetone = ["shirt", "pants"];
-            const quantitylist = ["10", "20", "30"];
+            const myproduct = document.forms["f"]["product"].value;
+            const myquantity = document.forms["f"]["quantity"].value;
+            const mytotal = document.forms["f"]["total"];
+          
             
-            if(myproduct="")
+            if(myproduct=="XXX")
              {
-                 alert("Please select the product you want")
+                 alert("Please select the product you want");
             }
             
-            else if(myquantity="")
+            else if(myquantity=="XXX")
             {
-                alert("Please select the quantity you want")
+                alert("Please select the quantity you want");
             }
 
             else{
-                if((myproduct="shirt")&&(myquantity=30))
-                
-                mytotal = prompt("Please make sure total price is between $12.99 and $24.99")
+                let myinp
+                if(myproduct=="Shirt")
+                    {
+                       myinp=parseFloat(prompt("Choose a price between $12.99 and $24.99 that you are willing to pay for the Shirts"));
+                       
+                    }
 
-                else{
-                    event.preventDefault();
-                    myfrm.total.value = (1 * myquantity).toFixed(2); 
+                else(myproduct=="Pants")
+                {
+                    myinp=parseFloat(prompt("Choose a price between $12.99 and $24.99 that you are willing to pay for the Pants"));
+
                 }
 
-            }
+              if ( myinp < 12.99 || myinp > 24.99)
+               {
+                alert("The price must be between $12.99 and $24.99.");
+               }
+
+
+               mytotal.value = "$" + (myinp * myquantity).toFixed(2);
+
+        }
+
+
+
+                
+            
 
             
 
