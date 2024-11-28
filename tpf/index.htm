@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta name="description" content="Discover specialty coffee shops, support independent cafés, and join a coffee revolution with Kohi. Kohi offers curated cafe profiles, a unified loyalty program, and resources for coffee lovers and café owners alike." />
+	<meta name="keywords" content="coffee, specialty coffee, independent cafes, coffee community, coffee loyalty program, best cafes, cafe profiles, Kohi app, coffee enthusiasts, coffee revolution, support local cafes, coffee experience, coffee app, artisanal coffee, curated cafes, unique cafes, café loyalty program, coffee discovery" />
+	<meta name="author" content="Skyler Yang">
+
+	
+	<title>Kohi Homepage</title>
+
+
+	<style>
+	/* Your styles go here */
+
+	/*
+	1. JavaScript is used to change the style in the index.htm, select.htm and map.htm. When user click on the title "kohi", it becomes yellow or gold color. In the map page, if user click on title it becomes blue.
+	2. JavaScript is used to change the text and image in the select.htm page. When user mouseover the image of cafes, the size the the image become bigger. When user mouseover the coffee options below, the size and color of the text changes. 
+	3. JavaScript is used to validate a form at contectus.htm page
+	4. JavaScript slide show is on top of the select.htm page and there are 4 images for slide show. 
+	5. JavaScript animation is used in the index page, the logo animates automatically
+	6. JavaScript with conditional statement is applied in all the pages except for the homepage, the user can change the color of the backgound. The button can be found each page under the coffee drop of the logo. 
+	7. Additional Javacript is on the aboutus.htm page. If user clicks at the button "Get inspired", a random quote will be displayed under the button.
+	8. Two jQuery effects are applied in the index.htm. The bottom text is fading in when user open the website and user can choose to show or hide the text by clicking the subtitles.
+	9. An additional jQuery is applied in the credits.htm page. The thank you part has animated typing.
+	10. Another jQuery is on the aboutus.htm page. If user mouseover the subtitles, style of the text below changes.
+	I have some other small effect that added with the help of Gen Ai, just for fun:)
+
+
+
+	*/
+	  h1#heading{color:white;font-family:'Helvetica Neue', Arial, sans-serif;font-weight: normal;line-height: 72px; letter-spacing:-1px ;
+	             text-align: left; margin-left: 4%;font-size:84px;margin-top: 15%;}
+	  img#banner{display: block; margin-left: 3%; width:15%;margin-top: -12%;  position: absolute;}
+	  .bold{font-weight: 1000;}
+	  p{color: white;}
+	  h2{color: white;}
+
+	  @font-face {
+		font-family: 'Helvetica Neue';
+		src: url('fonts/HelveticaNeue.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+}
+
+
+		body {background-image: url(dt.jpg);
+			background-size: cover; 
+			background-repeat: no-repeat; 
+			background-position: center; 
+			background-attachment: fixed; }
+
+		/*Start of the menu styles*/
+		.topnav {
+            margin-top: 15%;
+            overflow: hidden;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+;
+        }
+
+		.topnav a {
+            float: right;
+            color: white;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 2em;
+		}
+
+		.active {
+            color: white;
+        }
+       
+        .dropdown {
+            float: right;
+            overflow: hidden;
+			
+        }
+
+		.dropdown .dropdownbutton {
+            font-size: 2em;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 40px;
+            font-family: inherit;
+            background-color: inherit;
+            margin: 0;
+			
+        }
+
+		
+		.dropdowncontent {
+            position: absolute;
+            display: none;
+            background-color: white;
+            z-index: 1;
+			bottom: 9.5%; 
+			text-align: center;
+            padding: 14px 34.5px;
+            
+			
+		}
+
+		
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+		.dropdowncontent a {
+            float: none;
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+		}
+
+		.topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: white;
+            color: black;
+        }
+
+		.dropdowncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+		.topnav .icon {
+            display: none;
+        }
+	
+		.row{display:flex; flex-direction:row; }
+		.about {width:40%; margin:3%; text-align:left;font-family: 'Helvetica Neue', Arial, sans-serif; padding-bottom: 5%; }
+
+		
+		img#logo{margin-right: auto; margin-left: auto; width:50%}
+
+		@media screen and (max-width: 750px) {
+			.topnav a:not(:first-child),
+			.dropdown .dropdownbutton {
+				display: none;
+			}
+			.topnav a.icon {
+				float: right;
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 750px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+					@media screen and (max-width:750px)
+                {
+					
+					.row{flex-direction:column;}
+                    .about{width:80%; margin-right:auto; margin-left:auto; }
+				}
+
+			
+				#heading span {
+				display: inline-block;
+				opacity: 0; 
+				animation: fadeIn 4s ease forwards;
+				}
+
+				#heading span:nth-child(1) {
+					animation-delay: 3s;
+				}
+
+				
+
+				@keyframes fadeIn {
+					from {
+						opacity: 0;
+						transform: translateY(10px);
+					}
+					to {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+
+
+
+
+
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script type="text/javascript">
+       function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+	
+
+			$(document).ready(function () {
+			$(".about").hide().fadeIn(8000);
+			});
+
+			$(document).ready(function () {
+			$(".about h2").click(function () {
+				$(this).next("p").slideToggle();
+			});
+			});
+
+			var pos =0
+			var logostatus = 0, mytimer;
+			function flyLogo()
+			{
+			var mylogo;
+			mylogo=document.getElementById("banner");
+			logostatus =1 
+
+			mylogo.style.left=pos + "px";
+			pos = pos+ 1;
+			if (pos > 300)
+			{
+				pos=0
+			}
+			mytimer = setTimeout("flyLogo()",10);
+		
+		}
+
+			function starStop()
+			{
+				if(logostatus ==0)
+			{
+				mytimer = setTimeout("flyLogo(0)",10);
+			}
+			else
+			{
+				clearTimeout(mytimer);
+				logostatus = 0;
+			}
+			}
+
+			function makeGold(element) {
+            element.style.color = "rgb(245, 231, 154)"; 
+        }
+			
+
+
+
+
+
+	</script>
+	
+	
+	
+	</style>
+	
+	
+	
+	
+	
+  </head>
+
+  <!-- video can be found in the Kohi select page-->
+
+
+
+
+  <body onload="flyLogo()">	
+	<!-- Your HTML goes here -->
+	<img id="banner"  src="kohi_WHITE.png" alt="kohi" title="kohi logo"/>
+
+
+	<h1 id="heading">
+		find<br>
+		specialty<br>
+		cafés<br>
+		with<br>
+		<span class="bold" onclick="makeGold(this)">kohi</span><br>
+	</h1>
+	
+
+	<!--Here starts the menu-->
+	<div class="topnav" id="mytopnav">
+		
+		<a href="sitemap.htm">site-map</a>
+	    <a href="credits.htm">credits</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		<a href="contactus.htm">contact us</a>
+		
+		<a href="aboutus.htm">about us</a>
+
+		<div class="dropdown">
+			<button class="dropdownbutton">explore</button>
+			<div class="dropdowncontent">
+				<a href="map.htm" >map</a>
+			    <a href="select.htm" >select</a>
+		    </div>
+		</div>
+
+		<a href="index.htm" class="active">home</a>
+
+	</div>
+	
+
+
+	
+	
+
+<div class="row">
+
+
+<div class="about">
+
+
+
+		<h2>Discover <br> Unique<br> Cafés<br></h2>
+		<p>Kohi is your gateway to uncovering the best specialty cafés around you. With curated cafe profiles and insights, Kohi brings a world of exceptional coffee experiences directly to your fingertips.
+		</p>
+
+	</div>
+
+		<div class="about">
+
+
+	    <h2>Support <br> Independent<br> Cafés<br></h2>
+		<p>Kohi empowers independent cafés by connecting them with a passionate coffee community. We offer these cafes the tools to reach new customers, foster lasting loyalty, and thrive in the competitive market.
+		</p>
+
+	</div>
+
+	<div class="about">
+
+
+		<h2>Loyalty Program<br> with Endless <br> Possibilities <br></h2>
+		<p>Kohi Select offers a unified loyalty program that spans all participating cafes. With Kohi Select, you can earn points and redeem rewards wherever your coffee journey takes you.
+		</p>
+	
+		</div>
+
+		<div class="about">
+
+	<h2>Join Our<br> Coffee<br> Revolution<br></h2>
+	<p>Join us as we revolutionize how people enjoy coffee. Whether you're looking for your next great cup or looking to grow your cafe business, Kohi is here to serve.</p>
+
+</div>
+</div>
+	
+<audio autoplay controls loop>
+		<source src="Focus.mp3" type="audio/mp3"/>
+	</audio>
+	
+  </body>
+</html>
+

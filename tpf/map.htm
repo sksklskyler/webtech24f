@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <meta name="description" content="Find specialty cafes near you with Kohi's interactive map. Discover unique coffee spots, explore signature drinks, and plan your next visit in cities like New York and Boston. Navigate your coffee journey easily with Kohi." />
+    <meta name="keywords" content="coffee, cafe, Kohi cafe map, specialty coffee locations, coffee map, explore cafes, find coffee shops, New York coffee, cafe finder, coffee community, coffee app, independent cafes, artisan coffee" />
+	<meta name="author" content="Skyler Yang">
+
+	<title>Map</title>
+    <link rel="stylesheet" href="kohi.css" type="text/css"/>
+
+
+	<style>
+	/* Your styles go here */
+    
+     img#map{width: 60%; float: right; margin-right: 5%;margin-top: -15%;margin-bottom: 10%;}
+     
+	  .bold{font-weight: 1000;font-size: 50px;line-height: 48px;}
+	  p{color: black; font-family:'Helvetica Neue', Arial, sans-serif ; font-size: 20px; font-weight: 200;margin-left: 5%;}
+      div#opening{padding-top: 9%;font-family:'Helvetica Neue', Arial, sans-serif ; }
+
+
+
+	</style>
+	<script type="text/javascript">
+       function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+		function makeBlue(element) {
+            element.style.color = "rgb(146, 193, 193)"; // Change the text color to blue
+        }
+
+		function changeBackground() {
+        const color = document.getElementById("backgroundSelector").value;
+        if (color == "gold") {
+            document.body.style.backgroundColor = "beige";
+        } else if (color == "green") {
+            document.body.style.backgroundColor = "lightgreen";
+        } else if (color == "lightblue") {
+            document.body.style.backgroundColor = "lightblue";
+        } else {
+            document.body.style.backgroundColor = "white"; 
+        }
+    }
+
+	</script>
+	
+	
+	
+	</style>
+	
+	
+	
+	
+	
+  </head>
+
+  <!-- video can be found in the Kohi select page-->
+
+
+  <body>
+	<!-- Your HTML goes here -->
+    <img id="banner" src="kohi_BLACK.png" alt="kohi" title="kohi logo"/>
+	
+	<select id="backgroundSelector" onchange="changeBackground()">
+        <option value="white">White</option>
+        <option value="gold">Gold</option>
+        <option value="green">Green</option>
+        <option value="lightblue">Light Blue</option>
+    </select>
+
+	<!--Here starts the menu-->
+    <div class="topnav" id="mytopnav">
+
+        <a href="sitemap.htm">site-map</a>
+	    <a href="credits.htm">credits</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		<a href="contactus.htm">contact us</a>
+		
+		<a href="aboutus.htm">about us</a>
+
+		<div class="dropdown">
+			<button class="dropdownbutton">explore</button>
+			<div class="dropdowncontent">
+				<a href="map.htm" class="active">map</a>
+			    <a href="select.htm" >select</a>
+		    </div>
+		</div>
+
+		<a href="index.htm" >home</a>
+
+	</div>
+	
+
+
+
+
+	
+	<div id="opening">
+	
+	<p>
+		<span class="bold" onclick="makeBlue(this)">Explore<br>Café <br>Locations</span><br>
+		Use our map to easily find the nearest café,<br>
+		explore their signature drinks, and even place<br>
+		orders through the app. 
+
+
+
+
+    
+	</p>
+</div>
+   
+	<map name="cafemaps" id="cafemaps">
+		<area shape="poly" coords="459,193,482,182,503,195,504,223,494,240,485,276,471,275,451,225,453,204"  href="https://watchhouse.com/en-us/blogs/locations/watchhouse-5th-ave?srsltid=AfmBOopS-mBLG8YMVtCjI8o5cYOY8TwyXA1wX_TV3FV5H08RRa1L1QCa" alt="Watchhouse 5th Website"/>
+		<area shape="poly" coords="505,248,528,237,549,250,550,278,540,295,531,331,517,330,497,280,499,259" href="https://www.devocion.com/pages/devocion-cafe-flatiron-district-new-york-ny" alt="Devocion website1"/>
+		<area shape="poly" coords="418,413,432,407,463,424,438,494,418,494,402,434,411,417" href="https://www.devocion.com/pages/coffee-shop-midtown-manhattan" alt="Devocion website2"/>
+		<area shape="poly" coords="563,626,577,620,608,637,588,709,563,707,547,647,556,63" href="https://www.devocion.com/pages/devocion-cafe-williamsburg-brooklyn-ny" alt="Devocion website3"/>
+		<area shape="poly" coords="421,749,435,743,466,760,446,832,421,830,405,770,414,753" href="https://www.devocion.com/pages/coffee-shop-dumbo-brooklyn" alt="Devocion website4"/>
+		<area shape="poly" coords="347,509,371,507,392,529,378,614,349,616,330,538,339,519" href="https://us.lacabra.com/pages/soho" alt="lacabra website1"/>
+		<area shape="poly" coords="347,509,371,507,392,529,378,614,349,616,330,538,339,519" href="https://us.lacabra.com/pages/eastvillage" alt="lacabra website2"/>
+
+
+	</map>
+	<p>
+		<img id="map" src="cfmap.jpg" alt="cafemaps" title="Cafe Map NYC" usemap="#cafemaps"/>
+    </p>
+
+	
+
+	
+
+	
+  </body>
+</html>
+

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta name="description" content="Get in touch with Kohi. Whether you’re a coffee lover, cafe owner, or just have feedback, we’d love to hear from you. Share your thoughts, favorite cafes, and coffee preferences to help us build a stronger community." />
+	<meta name="keywords" content="customer service, contact Kohi, coffee community feedback, favorite cafe, coffee lovers, cafe support, coffee preferences, join Kohi, coffee community contact, share coffee opinions, Kohi feedback" />
+	<meta name="author" content="Skyler Yang">
+
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="kohi.css" type="text/css"/>
+
+	<style>
+	/* Your styles go here */
+		.title{ font-size: 40px;font-family:'Helvetica Neue', Arial, sans-serif ; font-weight: 600;}
+		p#opening{font-family:'Helvetica Neue', Arial, sans-serif ; margin-left: 30%;margin-top: 10%;}
+		p{font-family:'Helvetica Neue', Arial, sans-serif }
+	
+
+		form{margin-left: 30%;;background:url(istockphoto.jpg)repeat center fixed;border-style:hidden;
+			border-width: 1px;border-color:white;border-style: dotted;
+			width: 40%;padding-top: 5px; padding-bottom: 40px;margin-top: 40px;margin-bottom: 40px;
+		    padding-left: 15px;padding-right: 10px;font-family:'Helvetica Neue', Arial, sans-serif }
+
+		div#cu{color: black;font-size: medium;}
+		
+
+	</style>
+	<script type="text/javascript">
+       function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+		function changeBackground() {
+        const color = document.getElementById("backgroundSelector").value;
+        if (color == "gold") {
+            document.body.style.backgroundColor = "beige";
+        } else if (color == "green") {
+            document.body.style.backgroundColor = "lightgreen";
+        } else if (color == "lightblue") {
+            document.body.style.backgroundColor = "lightblue";
+        } else {
+            document.body.style.backgroundColor = "white"; 
+        }
+    }
+
+	function showData()
+            {
+				var myfrm, myname, myphone, myemail, mylocation, mycontext;
+                myfrm = document.getElementById("dafrm");
+                myname = myfrm.name.value;
+                myphone = myfrm.phone.value;
+				myemail=myfrm.email.value
+                mylocation = myfrm.location.value;
+                mycontext = myfrm.context.value;
+
+                
+                if(myname == "")
+                 {
+                    alert("Please enter your name")
+                 }
+                 else if ((myphone == "") || (isNaN(myphone)==true))
+                 {
+                    alert("Phone number must be entered and must be numerical")
+                 }
+				 else if ((myemail == "") || myemail.indexOf("@") === -1)
+                 {
+                    alert("Please enter the correct email")
+				 }
+                 else if(mylocation == "Empty")
+                 {
+                    alert("Please select a location")
+                 }
+                 else if  ( (mycontext !="Coffee Chat") && (mycontext !="Grab and Go") && (mycontext !="Work and Study") && (mycontext !="Social Hangouts") && (mycontext !="Social Hangouts") && (mycontext !="Solo Time") )
+                 {
+                    alert("Please select how you like to enjoy your coffee");
+                 }
+
+				 
+                 else
+                {
+                    event.preventDefault();
+                    myfrm.result.value = "Hello, my name is "+ myname + " and my phone number is " + myphone + " and my email is  " + myemail + " my favirote location is  "+ mylocation + " in the setting of " + mycontext; 
+                }
+            } 
+
+
+
+	</script>
+	
+	
+	
+	</style>
+	
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<img id="banner" src="kohi_BLACK.png" alt="kohi" title="kohi logo"/>
+	
+	<select id="backgroundSelector" onchange="changeBackground()">
+        <option value="white">White</option>
+        <option value="gold">Gold</option>
+        <option value="green">Green</option>
+        <option value="lightblue">Light Blue</option>
+    </select>
+
+	<!--Here starts the menu-->
+	<div class="topnav" id="mytopnav">
+
+		<a href="sitemap.htm">site-map</a>
+	    <a href="credits.htm">credits</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		<a href="contactus.htm"  class="active">contact us</a>
+		
+		<a href="aboutus.htm">about us</a>
+
+		<div class="dropdown">
+			<button class="dropdownbutton">explore</button>
+			<div class="dropdowncontent">
+				<a href="map.htm" >map</a>
+			    <a href="select.htm" >select</a>
+		    </div>
+		</div>
+
+		<a href="index.htm" >home</a>
+
+	</div>
+	
+
+
+	
+	<p id="opening">
+		<span class="title">let's talk</span><br>
+		We’d love to hear from you! Whether
+		you’re interested in joining our team, 
+		supporting Kohi’s growth,<br> or simply
+		sharing your opinions, we’re here to 
+		connect. Passionate about coffee? Tell us
+		 about your<br> favorite cafe and why it stands 
+		 out. Your insights and support help us
+		  build a stronger community and<br> improve
+		the Kohi experience for all coffee lovers.
+
+    
+	</p>
+</div>
+	
+
+	<div id="cu">
+		<form id="dafrm" method="post" action="">
+			<p>Name: <input type="text" name="name" size="20" placeholder="Enter Name Here" /></p>
+			<p>Phone Number: <input type="text" name="phone" size="20" placeholder="Enter Phone Number Here" /></p>
+			<p>Email: <input type="text" name="email" size="20" placeholder="Enter Email Here" /></p>
+			<p>
+				Please select your favorite location:
+				<select name="location">
+					<option value="Empty">Please Select a Location</option>
+					<option value="Watchhouse">Watchhouse</option>
+					<option value="Levocion">Levocion</option>
+					<option value="La Cabra">La Cabra</option>
+				</select>
+			</p>
+			<p>
+				How do you like to enjoy your coffee? :<br />
+				<input type="radio" name="context" value="Coffee Chat" />Coffee Chat
+				<input type="radio" name="context" value="Grab and Go" />Grab and Go
+				<input type="radio" name="context" value="Work and Study" />Work and Study
+				<input type="radio" name="context" value="Social Hangouts" />Social Hangouts
+				<input type="radio" name="context" value="Solo Time" />Solo Time
+			</p>
+
+<p>
+	What's Your Go-To Coffee? <br>
+	<input type="checkbox" name="coffee" value="Espresso"/>Espresso<br>
+	<input type="checkbox" name="coffee" value="Latte"/>Latte<br>
+	<input type="checkbox" name="coffee" value="Mocha"/>Mocha<br>
+	<input type="checkbox" name="coffee" value="Cappuccino"/>Cappuccino<br>
+	<input type="checkbox" name="coffee" value="Flat White"/>Flat White<br>
+	<input type="checkbox" name="coffee" value="Macchiato"/>Macchiato<br>
+	<input type="checkbox" name="coffee" value="Americano"/>Americano<br>
+
+
+</p>
+
+
+<p>
+	Please Enter Any Suggestion or Comments:<br>
+	<textarea rows="10" cols="40" name="result" placeholder="Type Something Here"></textarea>
+</p>
+<p>
+	<input onclick="showData()" type="submit" value="Submit">
+	<input type="reset" value="Reset">
+</p>
+</form>
+	</div>
+
+
+	
+  </body>
+</html>
+
